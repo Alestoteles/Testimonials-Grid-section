@@ -1,0 +1,139 @@
+* {
+    margin: 0vw;
+    padding: 0vw;
+    box-sizing: border-box;
+}
+
+:root { 
+    --Moderate-violet: hsl(263, 55%, 52%) ; 
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    /*Neutral*/
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+    }
+
+body { 
+    max-width: 1440px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.box-cards { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    padding: 1rem;
+    gap: 2rem;
+    grid-auto-flow: dense;
+}
+
+.cards-general { 
+    border-radius: 2rem;
+    padding: 1rem;
+    border: solid 0.1vw lightgrey;
+    box-shadow: 0.2vw 0.2vw 1vw 0.3vw lightgrey;
+    transition: box-shadow ease-in-out 0.4s;
+    
+}
+
+.cards-general:hover { 
+    box-shadow: none;
+    transform: scaleY(1.02);
+}
+
+.card-header img { 
+    float: left;
+    height: 3rem;
+    border-radius: 2rem;
+    border: 1px solid white;
+    margin-right: 0.8rem;
+}
+
+.card-header h1 { 
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.card-header span { 
+    color: var(--Light-gray);
+    font-size: 1.1rem;
+}
+
+.card-content { 
+    margin-top: 1rem;
+}
+
+.card-content h2 { 
+    color: var(--white);
+    margin-bottom: 1rem ;
+    font-size: 1.49rem;
+}
+
+.card-content p { 
+    font-size: 1rem;
+    color: var(--Light-gray);
+}
+
+.cards-white { 
+    background-color: var(--white);
+}
+
+.cards-white h1 { 
+    color: black;
+}
+.cards-white h2 { 
+    color: black;
+}
+
+.card-daniel { 
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-position: 85% 0;
+    background-size: 8rem;
+    background-repeat: no-repeat;
+    background-color: var(--Moderate-violet);
+     grid-column: span 2;
+}
+
+.card-jonathan {
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.card-kira { 
+    grid-row: span 2 ;
+}
+
+.card-patrick { 
+    background-color: var(--Very-dark-blackish-blue);
+    grid-column: span 2 ;
+}
+
+
+@media (max-width: 640px) { 
+    .box-cards { 
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    }
+
+}
+
+
+@media (max-width:600px) { 
+
+    .card-jonathan { 
+        grid-column: span 2;
+    }
+
+    .card-jeanette { 
+        grid-column: span 2;
+        grid-row: 3;
+    } 
+
+    .card-kira { 
+        grid-row: 5;
+        grid-column: span 2;
+    }
+}
